@@ -1,12 +1,14 @@
+MIN_LENGTH = 5
+MAX_LENGTH = 15
+
+
 def main():
-    MIN_LENGTH = 5
-    MAX_LENGTH = 15
     get_password(MAX_LENGTH, MIN_LENGTH)
 
 
-def get_password(MAX_LENGTH, MIN_LENGTH):
+def get_password(max_length, min_length):
     password = input("Enter password")
-    if len(password) < MIN_LENGTH or len(password) > MAX_LENGTH:
+    if len(password) < min_length or len(password) > max_length:
         password = input("Enter password")
     print(password)
 
