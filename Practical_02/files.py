@@ -16,8 +16,9 @@ print("Your name is", name)
 
 """Question 3"""
 number_file = open("numbers.txt", "r")
+number_line = 0
 line = number_file.readline()
-line_second = number_file.readline()
-print(line)
-print(line_second)
+for line in number_file:
+    number_line += 1
+    print(line)
 number_file.close()
