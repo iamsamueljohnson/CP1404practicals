@@ -18,7 +18,6 @@ def main():
                 number = random.randint(MINIMUM_NUMBERS, MAXIMUM_NUMBERS)
             quick_pick.append(number)
             quick_pick.sort()
-        # Looked at solution for final print
         print(" ".join("{:>2}".format(number) for number in quick_pick))
 
 
