@@ -1,21 +1,31 @@
 class Person:
-    def __init__(self, first_name="", last_name="", age=0):
-        self.first_name = first_name
-        self.last_name = last_name
+    def __init__(self, full_name="", age=0):
+        people_list = []
+        self.full_name = full_name
         self.age = age
 
     def __str__(self):
-        return "{} {} {}".format(self.first_name, self.last_name, self.age)
+        return "{} {}".format(self.full_name, self.age)
 
-    def full_name(self):
-        full_name = self.first_name + ' ' + self.last_name
-        print(full_name)
+
+MENU = "q) Quit  a) Add  l) List"
+
 
 def main():
-    person = []
-    first_name = input("Enter first name: ")
-    last_name = input("Enter last name: ")
-    age = int(input("Enter age"))
+    print(MENU)
+    choice = input("Enter your choice: ").upper()
+    while choice != "Q":
+        if choice == "A":
+            full_name = input("Enter full name: ")
+            age = int(input("Enter age: "))
+            add_person = Person(full_name, age)
+            print("You added '{}' to the list".format(add_person))
+        elif choice == "L":
+                print("{self.full_name} {self.age}".format(self=add_person))
+            print(Person)
+        print(MENU)
+        choice = input("Enter your choice: ").upper()
+    print("Goodbye!")
 
 
 main()

@@ -1,6 +1,7 @@
 from Practical_06.car import Car
 MENU = "Menu:\nd) Drive\nr) Refuel\nq) Quit"
 
+
 def main():
     print("Let's drive!")
     name = input("Enter your car name: ")
