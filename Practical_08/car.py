@@ -31,4 +31,4 @@ class Car:
         return distance
 
     def __str__(self):
-        return "{} {}".format(self.name, self.fuel)
+        return "{}, fuel={}".format(self.name, self.fuel)
